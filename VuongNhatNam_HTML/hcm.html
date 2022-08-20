@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+      <meta charset="utf-8" >
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+      <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+      
+
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+      <title>Vuong Nhat Nam _ 18119098</title>
+
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+      <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <link href="./style.css" rel="stylesheet">
+      <script src="hcm.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">PROJECT IOT</h4>
+              <p class="text-muted">On the way to success, there is no trace of lazy men.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact Us</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.facebook.com/bi.bu.336" class="text-white">Facebook</a></li>
+                <li><a href="https://www.youtube.com/channel/UCgt-u6Qp-CrCosvj8gQX8FA" class="text-white">Youtube</a></li>  
+                <li><a href="#" class="text-white">Zalo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <img src="hcmcity.png" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></img>
+            <strong>Thành Phố Hồ Chí Minh</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">IOT PROJECT KMT</h1>
+          <p class="lead text-muted">Thiết kế Web cập nhật nhiệt độ độ ẩm (DHT11), cập nhật dữ liệu FireBase đưa lên Web.</p>
+          <p>
+            <a href="hcm.html" class="btn btn-info" role="button">Ho Chi Minh City</a>&emsp;
+            <a href="dalat.html">Da Lat City</a>&emsp;
+            <a href="hanoi.html">Ha Noi City</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">        
+          <div class="row">
+            <!-- One Object-->
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="tempcity.png" width="60%" class="center">
+                <div class="card-body">
+                  <h1 id="nhietdo"></h1>
+                  <!-- <div class="nhietdo" id="nhietdo"></div> -->
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    <h3 class="text-muted" width="100%">Temperature</h3>
+                  </div>            
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="humdcity.png" width="60%" class="center">
+                <div class="card-body">
+                  <h1 id="doam"></h1>
+                  <!-- <div class="doam" id="doam"></div> -->
+                  <div class="d-flex justify-content-between align-items-center">
+                   
+                    <h3 class="text-muted" width="100%">Humidity</h3>
+                  </div>            
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="CO2city.png" width="60%" class="center">
+                <div class="card-body">
+                  <h1 id="co2"></h1>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    <h3 class="text-muted" width="100%">CO2 Concentration</h3>
+                  </div>            
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="noise.png" width="60%" class="center">
+                <div class="card-body">
+                  <h1 id="noise"></h1>
+                  <div class="d-flex justify-content-between align-items-center">
+                   
+                    <h3 class="text-muted" width="100%">Noising</h3>
+                  </div>            
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="uv.png" width="60%" class="center">
+                <div class="card-body">
+                  <h1 id="uv"></h1>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    <h3 class="text-muted" width="100%">UV Rays</h3>
+                  </div>            
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img src="wind.png" width="60%" class="center">
+                <div class="card-body">
+                  <h1 id="wind"></h1>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    <h3 class="text-muted" width="100%">Winding</h3>
+                  </div>            
+                </div>
+              </div>
+            </div>
+
+            
+            
+            
+
+        
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Bạn có thể tham khảo thiết kế Web HTML </p>
+        <a href="https://www.w3schools.com/html/default.asp">https://www.w3schools.com/</a> <br>
+        <a href="https://www.howkteam.vn/course/lap-trinh-front-end-co-ban-voi-website-landing-page/tong-quan-ve-html-va-cac-cu-phap-co-ban-2791">https://www.howkteam.vn/</a> <br>
+        <p>Cập nhật dữ liệu lên Firebase </p>
+        <a href="https://www.youtube.com/watch?v=Nz4Dtcs5yj8&t=25s">https://www.youtube.com/</a> 
+
+      
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script> -->
+  </body>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>ALL ABOUT OUR PROJECT</h6>
+          <p class="text-justify">SMART CITY</i>.</p>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text"> Design By Vương Nhật Nam _ 18119098 , Nguyễn Minh Nhật _ 18119104
+          </p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+ </html>

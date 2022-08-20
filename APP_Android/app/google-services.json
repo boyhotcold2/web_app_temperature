@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "416162317122",
+    "firebase_url": "https://smart-city-html-default-rtdb.firebaseio.com",
+    "project_id": "smart-city-html",
+    "storage_bucket": "smart-city-html.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416162317122:android:4bf95503ddc6d2ef12bedb",
+        "android_client_info": {
+          "package_name": "com.example.a18119098_vuongnhatnam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416162317122-o423ivkc0t7e34ls3sf6g1ur65au68af.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8UdLv3zOpLQLNqVlN_6LLVN4tnhbPswI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416162317122-o423ivkc0t7e34ls3sf6g1ur65au68af.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
